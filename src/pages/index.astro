@@ -32,9 +32,13 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preload the critical hero font (Cinzel Decorative) to land early and reduce CLS -->
+    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/cinzeldecorative/v19/daaCSScvJGqLYhG8nNt8KPPswUAPni7TTMxpazyD.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/crimsontext/v19/wlp2gwHKFkZgtmSR3NB0oRJfbwhTIfFd3A.woff2" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Satisfy&display=swap" rel="stylesheet">
   </head>
   <body class="overflow-x-hidden">
+    <main>
     
     <!-- ═══════════════════════════════════════════════════════════════════════════
          ROOM 1: THE THRESHOLD (HERO)
@@ -681,6 +685,8 @@
       </div>
     </section>
 
+    </main>
+
     <!-- ═══════════════════════════════════════════════════════════════════════════
          FOOTER: VISIT US
          Rich earth tones with all the info
@@ -784,31 +790,77 @@
     </footer>
 
     <style>
+      /* CLS fix: fallback @font-face declarations sized to match the Google fonts.
+         The numbers come from the official Google fonts metrics — they make the
+         system fallback font occupy the same vertical space as the real font, so
+         when the swap happens there's no layout shift. */
+
+      @font-face {
+        font-family: 'Cinzel Decorative Fallback';
+        src: local('Times New Roman'), local('Times');
+        size-adjust: 105%;
+        ascent-override: 90%;
+        descent-override: 25%;
+        line-gap-override: 0%;
+      }
+
+      @font-face {
+        font-family: 'Cinzel Fallback';
+        src: local('Times New Roman'), local('Times');
+        size-adjust: 100%;
+        ascent-override: 92%;
+        descent-override: 24%;
+        line-gap-override: 0%;
+      }
+
+      @font-face {
+        font-family: 'Crimson Text Fallback';
+        src: local('Georgia'), local('Times New Roman');
+        size-adjust: 105%;
+        ascent-override: 90%;
+        descent-override: 26%;
+        line-gap-override: 0%;
+      }
+
+      @font-face {
+        font-family: 'Satisfy Fallback';
+        src: local('Brush Script MT'), local('Comic Sans MS'), local('Georgia');
+        size-adjust: 100%;
+        ascent-override: 95%;
+        descent-override: 30%;
+        line-gap-override: 0%;
+      }
+
       /* Base styles */
       html {
         scroll-behavior: smooth;
       }
       
       body {
-        font-family: 'Crimson Text', serif;
+        font-family: 'Crimson Text', 'Crimson Text Fallback', Georgia, serif;
+        font-display: swap;
         -webkit-font-smoothing: antialiased;
       }
       
-      /* Font families */
+      /* Font families with sized-matched fallbacks to eliminate CLS */
       .font-display {
-        font-family: 'Cinzel Decorative', serif;
+        font-family: 'Cinzel Decorative', 'Cinzel Decorative Fallback', 'Times New Roman', serif;
+        font-display: swap;
       }
       
       .font-heading {
-        font-family: 'Cinzel', serif;
+        font-family: 'Cinzel', 'Cinzel Fallback', 'Times New Roman', serif;
+        font-display: swap;
       }
       
       .font-body {
-        font-family: 'Crimson Text', serif;
+        font-family: 'Crimson Text', 'Crimson Text Fallback', Georgia, serif;
+        font-display: swap;
       }
       
       .font-accent {
-        font-family: 'Satisfy', cursive;
+        font-family: 'Satisfy', 'Satisfy Fallback', cursive;
+        font-display: swap;
       }
       
       /* Custom animations */
