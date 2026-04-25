@@ -1,8 +1,8 @@
 import { defineConfig } from 'astro/config';
-import tailwindcss from '@tailwindcss/vite';
+import tailwind from '@astrojs/tailwind';
+
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  vite: {
-    plugins: [tailwindcss()],
-  },
+  integrations: [tailwind(), sitemap()],
 });

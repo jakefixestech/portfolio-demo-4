@@ -1,17 +1,850 @@
 ---
-
+// Moonstone & Sage - A Maximalist Bohemian Gift Shop Homepage
+// Single-file Astro component with all the mystical vibes
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Demo 4</title>
-	</head>
-	<body>
-		<h1>Demo 4</h1>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Moonstone & Sage | Mystical Gifts & Bohemian Treasures</title>
+    <meta name="description" content="Step into Moonstone & Sage — your local haven for crystals, tarot, handmade jewelry, candles, incense, and mystical treasures on Main Street." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://demo4.jakefixestech.com/" />
+    <meta property="og:title" content="Moonstone & Sage | Mystical Gifts & Bohemian Treasures" />
+    <meta property="og:description" content="Step into Moonstone & Sage — your local haven for crystals, tarot, handmade jewelry, candles, incense, and mystical treasures on Main Street." />
+    <meta property="og:image" content="https://demo4.jakefixestech.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A warm, candlelit mystical gift shop interior with crystals, candles, and bohemian treasures" />
+    <meta property="og:site_name" content="Moonstone & Sage" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://demo4.jakefixestech.com/" />
+    <meta name="twitter:title" content="Moonstone & Sage | Mystical Gifts & Bohemian Treasures" />
+    <meta name="twitter:description" content="Step into Moonstone & Sage — your local haven for crystals, tarot, handmade jewelry, candles, incense, and mystical treasures on Main Street." />
+    <meta name="twitter:image" content="https://demo4.jakefixestech.com/og-image.jpg" />
+    <meta name="twitter:image:alt" content="A warm, candlelit mystical gift shop interior with crystals, candles, and bohemian treasures" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Satisfy&display=swap" rel="stylesheet">
+  </head>
+  <body class="overflow-x-hidden">
+    
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         ROOM 1: THE THRESHOLD (HERO)
+         Deep magenta/fuchsia atmosphere - The entrance to wonder
+    ═══════════════════════════════════════════════════════════════════════════ -->
+    <section class="relative min-h-screen overflow-hidden" style="background: radial-gradient(ellipse at top left, #6b1d4e 0%, #4a1438 40%, #2d0f3a 100%);">
+      
+      <!-- Decorative floating elements -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <!-- Stars and sparkles -->
+        <div class="absolute top-20 left-[10%] w-2 h-2 bg-[#f4c542] rounded-full animate-pulse opacity-80"></div>
+        <div class="absolute top-32 left-[25%] w-1 h-1 bg-[#f4c542] rounded-full animate-pulse opacity-60" style="animation-delay: 0.5s;"></div>
+        <div class="absolute top-16 left-[40%] w-3 h-3 bg-[#f4c542] rounded-full animate-pulse opacity-70" style="animation-delay: 1s;"></div>
+        <div class="absolute top-40 left-[55%] w-1.5 h-1.5 bg-[#f4c542] rounded-full animate-pulse opacity-90" style="animation-delay: 0.3s;"></div>
+        <div class="absolute top-24 left-[70%] w-2 h-2 bg-[#f4c542] rounded-full animate-pulse opacity-75" style="animation-delay: 0.7s;"></div>
+        <div class="absolute top-48 left-[85%] w-1 h-1 bg-[#f4c542] rounded-full animate-pulse opacity-65" style="animation-delay: 1.2s;"></div>
+        <div class="absolute top-60 left-[15%] w-1.5 h-1.5 bg-[#f4c542] rounded-full animate-pulse opacity-80" style="animation-delay: 0.9s;"></div>
+        <div class="absolute top-72 left-[90%] w-2 h-2 bg-[#f4c542] rounded-full animate-pulse opacity-70" style="animation-delay: 0.4s;"></div>
+        
+        <!-- Hanging decorations silhouettes -->
+        <svg class="absolute top-0 left-[5%] w-16 h-32 text-[#2d0f3a]/50" viewBox="0 0 64 128" fill="currentColor">
+          <path d="M32 0v40M32 40c-8 0-15 7-15 15s7 15 15 15 15-7 15-15-7-15-15-15M32 70v20M28 90l4 10 4-10" stroke="currentColor" stroke-width="2" fill="none"/>
+          <circle cx="32" cy="55" r="12" opacity="0.5"/>
+        </svg>
+        <svg class="absolute top-0 right-[8%] w-12 h-28 text-[#2d0f3a]/40" viewBox="0 0 48 112" fill="currentColor">
+          <path d="M24 0v30" stroke="currentColor" stroke-width="1" fill="none"/>
+          <polygon points="24,30 12,60 24,55 36,60" opacity="0.6"/>
+          <path d="M24 55v25M20 80l4 8 4-8" stroke="currentColor" stroke-width="1" fill="none"/>
+        </svg>
+        
+        <!-- Moon phases decoration -->
+        <div class="absolute top-8 right-[20%] flex gap-3 opacity-60">
+          <div class="w-4 h-4 rounded-full bg-[#f4c542]/30"></div>
+          <div class="w-5 h-5 rounded-full bg-[#f4c542]/50"></div>
+          <div class="w-6 h-6 rounded-full bg-[#f4c542]/80"></div>
+          <div class="w-5 h-5 rounded-full bg-[#f4c542]/50"></div>
+          <div class="w-4 h-4 rounded-full bg-[#f4c542]/30"></div>
+        </div>
+        
+        <!-- Mandala corner decorations -->
+        <svg class="absolute -bottom-20 -left-20 w-64 h-64 text-[#f4c542]/10 rotate-45" viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="90" fill="none" stroke="currentColor" stroke-width="1"/>
+          <circle cx="100" cy="100" r="70" fill="none" stroke="currentColor" stroke-width="1"/>
+          <circle cx="100" cy="100" r="50" fill="none" stroke="currentColor" stroke-width="1"/>
+          <circle cx="100" cy="100" r="30" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M100 10 L100 190 M10 100 L190 100 M30 30 L170 170 M170 30 L30 170" stroke="currentColor" stroke-width="0.5"/>
+        </svg>
+        <svg class="absolute -top-20 -right-20 w-72 h-72 text-[#f4c542]/10 -rotate-12" viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="95" fill="none" stroke="currentColor" stroke-width="1"/>
+          <circle cx="100" cy="100" r="75" fill="none" stroke="currentColor" stroke-width="1"/>
+          <circle cx="100" cy="100" r="55" fill="none" stroke="currentColor" stroke-width="1"/>
+          <circle cx="100" cy="100" r="35" fill="none" stroke="currentColor" stroke-width="2"/>
+          {[...Array(12)].map((_, i) => `<line x1="100" y1="5" x2="100" y2="25" transform="rotate(${i * 30} 100 100)" stroke="currentColor" stroke-width="1"/>`).join('')}
+        </svg>
+      </div>
+      
+      <!-- Main hero content -->
+      <div class="relative z-10 container mx-auto px-6 py-12 min-h-screen flex flex-col justify-center items-center text-center">
+        
+        <!-- Ornate top border -->
+        <div class="absolute top-0 left-0 right-0 h-8 overflow-hidden">
+          <svg class="w-full h-8" viewBox="0 0 1200 32" preserveAspectRatio="none">
+            <path d="M0,32 Q150,0 300,16 T600,16 T900,16 T1200,32" fill="none" stroke="#f4c542" stroke-width="2" opacity="0.5"/>
+            <path d="M0,28 Q150,4 300,20 T600,20 T900,20 T1200,28" fill="none" stroke="#f4c542" stroke-width="1" opacity="0.3"/>
+          </svg>
+        </div>
+        
+        <!-- Logo/Title Area -->
+        <div class="mb-8 relative">
+          <!-- Decorative crescent moons -->
+          <span class="absolute -left-16 top-1/2 -translate-y-1/2 text-6xl text-[#f4c542]/70">☽</span>
+          <span class="absolute -right-16 top-1/2 -translate-y-1/2 text-6xl text-[#f4c542]/70">☾</span>
+          
+          <h1 class="font-display text-5xl md:text-7xl lg:text-8xl text-[#f4c542] tracking-wider drop-shadow-lg" style="text-shadow: 0 0 40px rgba(244, 197, 66, 0.5);">
+            Moonstone
+            <span class="block text-3xl md:text-4xl lg:text-5xl text-[#fff5e6]/90 font-accent my-4">&</span>
+            Sage
+          </h1>
+        </div>
+        
+        <!-- Tagline with decorative elements -->
+        <div class="relative mb-12">
+          <div class="flex items-center justify-center gap-4 mb-4">
+            <span class="text-[#f4c542]">✦</span>
+            <span class="w-24 h-px bg-gradient-to-r from-transparent via-[#f4c542] to-transparent"></span>
+            <span class="text-[#f4c542]">☆</span>
+            <span class="w-24 h-px bg-gradient-to-r from-transparent via-[#f4c542] to-transparent"></span>
+            <span class="text-[#f4c542]">✦</span>
+          </div>
+          <p class="font-heading text-xl md:text-2xl text-[#fff5e6]/90 tracking-widest uppercase">
+            Mystical Gifts & Bohemian Treasures
+          </p>
+          <p class="font-body text-lg text-[#f5a3c7] mt-3 italic">
+            Since 1987 on Main Street
+          </p>
+        </div>
+        
+        <!-- Atmospheric description -->
+        <p class="font-body text-lg md:text-xl text-[#fff5e6]/80 max-w-3xl leading-relaxed mb-12">
+          Step through our door and let the incense embrace you. Crystals catch the light from every corner, 
+          tapestries whisper ancient stories, and somewhere, wind chimes sing. 
+          <span class="text-[#f4c542] font-semibold">This is your place.</span>
+        </p>
+        
+        <!-- CTA Buttons with ornate styling -->
+        <div class="flex flex-col sm:flex-row gap-6 mb-16">
+          <a href="#shop-rooms" class="group relative px-10 py-4 bg-[#f4c542] text-[#2d0f3a] font-heading text-lg uppercase tracking-wider rounded-none overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(244,197,66,0.5)]">
+            <span class="relative z-10">Enter the Shop</span>
+            <div class="absolute inset-0 bg-[#fff5e6] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+          </a>
+          <a href="#hours" class="group px-10 py-4 border-2 border-[#f4c542]/60 text-[#f4c542] font-heading text-lg uppercase tracking-wider hover:bg-[#f4c542]/10 transition-all hover:border-[#f4c542]">
+            Visit Us ✧ 123 Main St
+          </a>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+          <span class="font-body text-sm text-[#fff5e6]/60">Explore Our Rooms</span>
+          <svg class="w-6 h-6 text-[#f4c542]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </div>
+      </div>
+      
+      <!-- Bottom wave transition -->
+      <div class="absolute bottom-0 left-0 right-0">
+        <svg class="w-full h-24" viewBox="0 0 1440 96" preserveAspectRatio="none">
+          <path d="M0,64 C360,96 720,32 1080,64 C1260,80 1380,48 1440,64 L1440,96 L0,96 Z" fill="#0d4f4f"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         ROOM 2: THE CRYSTAL CAVE
+         Deep teal/turquoise with glowing accents
+    ═══════════════════════════════════════════════════════════════════════════ -->
+    <section id="shop-rooms" class="relative py-24 overflow-hidden" style="background: linear-gradient(180deg, #0d4f4f 0%, #1a7a7a 50%, #0d4f4f 100%);">
+      
+      <!-- Crystal/geometric decorations -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <!-- Glowing orbs representing crystals -->
+        <div class="absolute top-20 left-[5%] w-20 h-20 rounded-full bg-[#7fdbdb]/20 blur-xl animate-pulse"></div>
+        <div class="absolute top-40 right-[10%] w-32 h-32 rounded-full bg-[#9b59b6]/20 blur-2xl animate-pulse" style="animation-delay: 1s;"></div>
+        <div class="absolute bottom-32 left-[15%] w-24 h-24 rounded-full bg-[#f5a3c7]/15 blur-xl animate-pulse" style="animation-delay: 0.5s;"></div>
+        <div class="absolute top-60 left-[60%] w-16 h-16 rounded-full bg-[#7fdbdb]/25 blur-lg animate-pulse" style="animation-delay: 1.5s;"></div>
+        
+        <!-- Crystal shapes -->
+        <svg class="absolute top-10 left-[20%] w-12 h-20 text-[#7fdbdb]/30" viewBox="0 0 48 80">
+          <polygon points="24,0 48,60 24,80 0,60" fill="currentColor"/>
+        </svg>
+        <svg class="absolute top-32 right-[25%] w-8 h-14 text-[#9b59b6]/25 rotate-12" viewBox="0 0 32 56">
+          <polygon points="16,0 32,42 16,56 0,42" fill="currentColor"/>
+        </svg>
+        <svg class="absolute bottom-20 right-[15%] w-10 h-16 text-[#f5a3c7]/20 -rotate-6" viewBox="0 0 40 64">
+          <polygon points="20,0 40,48 20,64 0,48" fill="currentColor"/>
+        </svg>
+        
+        <!-- Sparkle pattern -->
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle, #7fdbdb 1px, transparent 1px); background-size: 60px 60px; opacity: 0.1;"></div>
+      </div>
+      
+      <div class="relative z-10 container mx-auto px-6">
+        <!-- Section header with ornate styling -->
+        <div class="text-center mb-16">
+          <div class="flex items-center justify-center gap-4 mb-6">
+            <svg class="w-8 h-8 text-[#7fdbdb]" viewBox="0 0 32 32" fill="currentColor">
+              <polygon points="16,0 20,12 32,12 22,20 26,32 16,24 6,32 10,20 0,12 12,12"/>
+            </svg>
+            <h2 class="font-display text-4xl md:text-5xl text-[#7fdbdb] tracking-wide" style="text-shadow: 0 0 30px rgba(127, 219, 219, 0.5);">
+              The Crystal Cave
+            </h2>
+            <svg class="w-8 h-8 text-[#7fdbdb]" viewBox="0 0 32 32" fill="currentColor">
+              <polygon points="16,0 20,12 32,12 22,20 26,32 16,24 6,32 10,20 0,12 12,12"/>
+            </svg>
+          </div>
+          <p class="font-body text-xl text-[#fff5e6]/80 max-w-2xl mx-auto">
+            Where light dances through amethyst, rose quartz hums with love, and every crystal chooses its keeper
+          </p>
+        </div>
+        
+        <!-- Crystal categories in ornate cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          
+          <!-- Card 1: Raw Crystals -->
+          <div class="group relative p-8 bg-gradient-to-br from-[#0d4f4f]/80 to-[#1a7a7a]/60 border-2 border-[#7fdbdb]/30 rounded-lg overflow-hidden hover:border-[#7fdbdb]/60 transition-all hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(127,219,219,0.3)]">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-[#9b59b6]/10 rounded-full blur-2xl"></div>
+            <div class="relative">
+              <div class="text-5xl mb-4">💎</div>
+              <h3 class="font-heading text-2xl text-[#7fdbdb] mb-3">Raw Crystals & Clusters</h3>
+              <p class="font-body text-[#fff5e6]/70 leading-relaxed">
+                Amethyst cathedrals, citrine points, smoky quartz clusters, and raw specimens from every corner of Earth. 
+                Feel their energy before you even touch them.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-[#9b59b6]/30 text-[#f5a3c7] text-sm rounded-full">Amethyst</span>
+                <span class="px-3 py-1 bg-[#9b59b6]/30 text-[#f5a3c7] text-sm rounded-full">Citrine</span>
+                <span class="px-3 py-1 bg-[#9b59b6]/30 text-[#f5a3c7] text-sm rounded-full">Quartz</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Card 2: Tumbled Stones -->
+          <div class="group relative p-8 bg-gradient-to-br from-[#0d4f4f]/80 to-[#1a7a7a]/60 border-2 border-[#7fdbdb]/30 rounded-lg overflow-hidden hover:border-[#7fdbdb]/60 transition-all hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(127,219,219,0.3)]">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-[#f5a3c7]/10 rounded-full blur-2xl"></div>
+            <div class="relative">
+              <div class="text-5xl mb-4">🔮</div>
+              <h3 class="font-heading text-2xl text-[#7fdbdb] mb-3">Tumbled Stones & Spheres</h3>
+              <p class="font-body text-[#fff5e6]/70 leading-relaxed">
+                Bins overflowing with polished treasures — tiger&apos;s eye, lapis lazuli, obsidian, moonstone. 
+                Spheres for scrying, palm stones for meditation, worry stones for your pocket.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-[#7fdbdb]/20 text-[#7fdbdb] text-sm rounded-full">Palm Stones</span>
+                <span class="px-3 py-1 bg-[#7fdbdb]/20 text-[#7fdbdb] text-sm rounded-full">Spheres</span>
+                <span class="px-3 py-1 bg-[#7fdbdb]/20 text-[#7fdbdb] text-sm rounded-full">Hearts</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Card 3: Crystal Jewelry -->
+          <div class="group relative p-8 bg-gradient-to-br from-[#0d4f4f]/80 to-[#1a7a7a]/60 border-2 border-[#7fdbdb]/30 rounded-lg overflow-hidden hover:border-[#7fdbdb]/60 transition-all hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(127,219,219,0.3)]">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-[#7fdbdb]/10 rounded-full blur-2xl"></div>
+            <div class="relative">
+              <div class="text-5xl mb-4">✨</div>
+              <h3 class="font-heading text-2xl text-[#7fdbdb] mb-3">Crystal Jewelry</h3>
+              <p class="font-body text-[#fff5e6]/70 leading-relaxed">
+                Handwrapped pendants, crystal point necklaces, gemstone rings, and chakra bracelets. 
+                Wear your intentions. Carry your protection.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-[#f5a3c7]/20 text-[#f5a3c7] text-sm rounded-full">Pendants</span>
+                <span class="px-3 py-1 bg-[#f5a3c7]/20 text-[#f5a3c7] text-sm rounded-full">Rings</span>
+                <span class="px-3 py-1 bg-[#f5a3c7]/20 text-[#f5a3c7] text-sm rounded-full">Bracelets</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Featured crystal banner -->
+        <div class="relative p-8 md:p-12 bg-gradient-to-r from-[#9b59b6]/30 via-[#0d4f4f]/50 to-[#9b59b6]/30 border border-[#9b59b6]/40 rounded-lg overflow-hidden">
+          <div class="absolute inset-0 opacity-20" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cpath d=&quot;M30 5 L35 25 L55 30 L35 35 L30 55 L25 35 L5 30 L25 25 Z&quot; fill=&quot;%239b59b6&quot; fill-opacity=&quot;0.3&quot;/%3E%3C/svg%3E');"></div>
+          <div class="relative flex flex-col md:flex-row items-center gap-8">
+            <div class="text-8xl animate-pulse">🌙</div>
+            <div class="text-center md:text-left">
+              <span class="font-accent text-2xl text-[#f5a3c7]">This Month&apos;s Stone</span>
+              <h3 class="font-display text-3xl md:text-4xl text-[#fff5e6] mt-2">Labradorite</h3>
+              <p class="font-body text-[#7fdbdb] mt-3 max-w-xl">
+                The stone of transformation and magic. Watch the flash of blue, green, and gold dance across its surface — 
+                each piece holds the aurora borealis within.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Transition to next section -->
+      <div class="absolute bottom-0 left-0 right-0">
+        <svg class="w-full h-20" viewBox="0 0 1440 80" preserveAspectRatio="none">
+          <path d="M0,0 C480,80 960,0 1440,80 L1440,80 L0,80 Z" fill="#8b4513"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         ROOM 3: THE CANDLE CORNER
+         Warm amber/orange glow like candlelight
+    ═══════════════════════════════════════════════════════════════════════════ -->
+    <section class="relative py-24 overflow-hidden" style="background: linear-gradient(135deg, #8b4513 0%, #cc5500 30%, #8b4513 70%, #5c2e0a 100%);">
+      
+      <!-- Candle glow effects -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-20 left-[10%] w-40 h-40 rounded-full bg-[#f5a623]/30 blur-3xl animate-pulse"></div>
+        <div class="absolute top-40 right-[15%] w-48 h-48 rounded-full bg-[#f5a623]/25 blur-3xl animate-pulse" style="animation-delay: 0.7s;"></div>
+        <div class="absolute bottom-20 left-[30%] w-36 h-36 rounded-full bg-[#fff5e6]/20 blur-2xl animate-pulse" style="animation-delay: 1.2s;"></div>
+        <div class="absolute top-1/2 right-[5%] w-32 h-32 rounded-full bg-[#cc5500]/40 blur-2xl animate-pulse" style="animation-delay: 0.3s;"></div>
+        
+        <!-- Smoke wisps -->
+        <svg class="absolute top-10 left-[25%] w-8 h-32 text-[#fff5e6]/10 animate-pulse" viewBox="0 0 32 128">
+          <path d="M16 128 Q8 100 16 80 Q24 60 16 40 Q8 20 16 0" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <svg class="absolute top-20 right-[30%] w-6 h-24 text-[#fff5e6]/10 animate-pulse" style="animation-delay: 0.5s;" viewBox="0 0 24 96">
+          <path d="M12 96 Q4 75 12 56 Q20 37 12 18 Q4 0 12 0" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </div>
+      
+      <div class="relative z-10 container mx-auto px-6">
+        <!-- Section header -->
+        <div class="text-center mb-16">
+          <div class="flex items-center justify-center gap-4 mb-6">
+            <span class="text-4xl">🕯️</span>
+            <h2 class="font-display text-4xl md:text-5xl text-[#f5a623] tracking-wide" style="text-shadow: 0 0 30px rgba(245, 166, 35, 0.6);">
+              The Candle Corner
+            </h2>
+            <span class="text-4xl">🕯️</span>
+          </div>
+          <p class="font-body text-xl text-[#fff5e6]/90 max-w-2xl mx-auto">
+            Incense smoke curls toward the ceiling. The air is thick with sandalwood, dragon&apos;s blood, and nag champa. 
+            Every breath is a blessing.
+          </p>
+        </div>
+        
+        <!-- Product showcase in layered cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          
+          <!-- Candles -->
+          <div class="relative p-8 bg-[#5c2e0a]/60 border-2 border-[#f5a623]/40 rounded-lg backdrop-blur-sm">
+            <div class="absolute -top-4 left-8 px-4 py-1 bg-[#f5a623] text-[#5c2e0a] font-heading text-sm uppercase tracking-wider">
+              Handpoured
+            </div>
+            <h3 class="font-heading text-2xl text-[#f5a623] mb-4 mt-2">Ritual Candles</h3>
+            <ul class="font-body text-[#fff5e6]/80 space-y-2">
+              <li class="flex items-center gap-3"><span class="text-[#f5a623]">✦</span> Spell candles in every color</li>
+              <li class="flex items-center gap-3"><span class="text-[#f5a623]">✦</span> 7-day glass jar candles</li>
+              <li class="flex items-center gap-3"><span class="text-[#f5a623]">✦</span> Beeswax tapers & pillars</li>
+              <li class="flex items-center gap-3"><span class="text-[#f5a623]">✦</span> Intention candles with herbs</li>
+              <li class="flex items-center gap-3"><span class="text-[#f5a623]">✦</span> Zodiac & moon phase candles</li>
+              <li class="flex items-center gap-3"><span class="text-[#f5a623]">✦</span> Chime candles for quick spells</li>
+            </ul>
+          </div>
+          
+          <!-- Incense -->
+          <div class="relative p-8 bg-[#5c2e0a]/60 border-2 border-[#f5a623]/40 rounded-lg backdrop-blur-sm">
+            <div class="absolute -top-4 left-8 px-4 py-1 bg-[#f5a623] text-[#5c2e0a] font-heading text-sm uppercase tracking-wider">
+              Aromatic
+            </div>
+            <h3 class="font-heading text-2xl text-[#f5a623] mb-4 mt-2">Incense & Smudge</h3>
+            <ul class="font-body text-[#fff5e6]/80 space-y-2">
+              <li class="flex items-center gap-3"><span class="text-[#f5a623]">✦</span> Nag Champa & Satya classics</li>
+              <li class="flex items-center gap-3"><span class="text-[#f5a623]">✦</span> White sage bundles (ethically sourced)</li>
+              <li class="flex items-center gap-3"><span class="text-[#f5a623]">✦</span> Palo santo sticks</li>
+              <li class="flex items-center gap-3"><span class="text-[#f5a623]">✦</span> Resin incense & charcoal</li>
+              <li class="flex items-center gap-3"><span class="text-[#f5a623]">✦</span> Cedar, sweetgrass, juniper</li>
+              <li class="flex items-center gap-3"><span class="text-[#f5a623]">✦</span> Backflow cone incense</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Essential oils banner -->
+        <div class="relative p-8 bg-gradient-to-r from-[#cc5500]/40 via-[#f5a623]/30 to-[#cc5500]/40 border border-[#f5a623]/50 rounded-lg overflow-hidden">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-6">
+              <div class="text-6xl">🌿</div>
+              <div>
+                <h3 class="font-heading text-2xl text-[#fff5e6]">Essential Oils & Blends</h3>
+                <p class="font-body text-[#f5a623]">Lavender dreams, eucalyptus clarity, patchouli grounding</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 flex-wrap justify-center">
+              <span class="px-4 py-2 bg-[#5c2e0a]/60 text-[#fff5e6] font-body rounded-full border border-[#f5a623]/30">Diffuser Blends</span>
+              <span class="px-4 py-2 bg-[#5c2e0a]/60 text-[#fff5e6] font-body rounded-full border border-[#f5a623]/30">Roll-Ons</span>
+              <span class="px-4 py-2 bg-[#5c2e0a]/60 text-[#fff5e6] font-body rounded-full border border-[#f5a623]/30">Singles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Transition -->
+      <div class="absolute bottom-0 left-0 right-0">
+        <svg class="w-full h-24" viewBox="0 0 1440 96" preserveAspectRatio="none">
+          <path d="M0,48 Q360,96 720,48 T1440,48 L1440,96 L0,96 Z" fill="#1a3d2e"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         ROOM 4: THE READING ROOM
+         Deep forest green with burgundy and parchment
+    ═══════════════════════════════════════════════════════════════════════════ -->
+    <section class="relative py-24 overflow-hidden" style="background: linear-gradient(180deg, #1a3d2e 0%, #2d5a3d 50%, #1a3d2e 100%);">
+      
+      <!-- Decorative bookish elements -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <!-- Old paper texture overlay -->
+        <div class="absolute inset-0 opacity-5" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;100&quot; height=&quot;100&quot; viewBox=&quot;0 0 100 100&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cfilter id=&quot;noise&quot;%3E%3CfeTurbulence type=&quot;fractalNoise&quot; baseFrequency=&quot;0.8&quot; numOctaves=&quot;4&quot; stitchTiles=&quot;stitch&quot;/%3E%3C/filter%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; filter=&quot;url(%23noise)&quot; opacity=&quot;0.5&quot;/%3E%3C/svg%3E');"></div>
+        
+        <!-- Corner flourishes -->
+        <svg class="absolute top-0 left-0 w-48 h-48 text-[#722f37]/20" viewBox="0 0 100 100">
+          <path d="M0,0 Q50,10 50,50 Q10,50 0,0" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M0,0 Q30,5 35,35 Q5,30 0,0" fill="none" stroke="currentColor" stroke-width="1"/>
+        </svg>
+        <svg class="absolute top-0 right-0 w-48 h-48 text-[#722f37]/20 scale-x-[-1]" viewBox="0 0 100 100">
+          <path d="M0,0 Q50,10 50,50 Q10,50 0,0" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M0,0 Q30,5 35,35 Q5,30 0,0" fill="none" stroke="currentColor" stroke-width="1"/>
+        </svg>
+        
+        <!-- Mystical symbols -->
+        <div class="absolute top-32 left-[8%] text-6xl text-[#f4e9d8]/10 rotate-12">☽</div>
+        <div class="absolute top-48 right-[12%] text-5xl text-[#f4e9d8]/10 -rotate-6">✡</div>
+        <div class="absolute bottom-40 left-[15%] text-7xl text-[#f4e9d8]/10">☉</div>
+      </div>
+      
+      <div class="relative z-10 container mx-auto px-6">
+        <!-- Section header -->
+        <div class="text-center mb-16">
+          <div class="flex items-center justify-center gap-4 mb-6">
+            <span class="text-4xl">📚</span>
+            <h2 class="font-display text-4xl md:text-5xl text-[#f4e9d8] tracking-wide">
+              The Reading Room
+            </h2>
+            <span class="text-4xl">🔮</span>
+          </div>
+          <p class="font-body text-xl text-[#f4e9d8]/80 max-w-2xl mx-auto">
+            Ancient wisdom stacked floor to ceiling. Tarot spreads waiting to be laid. 
+            The answers you seek are between these covers.
+          </p>
+        </div>
+        
+        <!-- Three column layout for books, tarot, divination -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          
+          <!-- Books -->
+          <div class="p-8 bg-[#722f37]/40 border-2 border-[#722f37] rounded-lg">
+            <div class="text-center mb-6">
+              <div class="inline-block p-4 bg-[#1a3d2e] rounded-full border-2 border-[#f4e9d8]/30" aria-hidden="true">
+                <span class="text-4xl" style="color:#f4e9d8;">📖</span>
+              </div>
+            </div>
+            <h3 class="font-heading text-2xl text-[#f4e9d8] text-center mb-4">Books & Tomes</h3>
+            <ul class="font-body text-[#f4e9d8]/80 space-y-3">
+              <li class="flex items-start gap-2">
+                <span class="text-[#722f37] mt-1">❧</span>
+                <span>Wicca, witchcraft & paganism</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#722f37] mt-1">❧</span>
+                <span>Herbalism & green magic</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#722f37] mt-1">❧</span>
+                <span>Astrology & birth charts</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#722f37] mt-1">❧</span>
+                <span>Mythology & folklore</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#722f37] mt-1">❧</span>
+                <span>Meditation & spirituality</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Tarot -->
+          <div class="p-8 bg-[#f4e9d8]/10 border-2 border-[#f4e9d8]/40 rounded-lg">
+            <div class="text-center mb-6">
+              <div class="inline-block p-4 bg-[#722f37] rounded-full border-2 border-[#f4e9d8]/30" aria-hidden="true">
+                <span class="text-4xl" style="color:#f4e9d8;">🃏</span>
+              </div>
+            </div>
+            <h3 class="font-heading text-2xl text-[#f4e9d8] text-center mb-4">Tarot & Oracle</h3>
+            <p class="font-body text-[#f4e9d8]/80 text-center mb-4">
+              Over <span class="text-[#f4e9d8] font-semibold">200 decks</span> in stock — from classic Rider-Waite to indie artists, 
+              gothic to whimsical, traditional to modern.
+            </p>
+            <div class="flex flex-wrap justify-center gap-2 mt-4">
+              <span class="px-3 py-1 bg-[#722f37]/50 text-[#f4e9d8] text-sm rounded">Rider-Waite</span>
+              <span class="px-3 py-1 bg-[#722f37]/50 text-[#f4e9d8] text-sm rounded">Thoth</span>
+              <span class="px-3 py-1 bg-[#722f37]/50 text-[#f4e9d8] text-sm rounded">Wild Unknown</span>
+              <span class="px-3 py-1 bg-[#722f37]/50 text-[#f4e9d8] text-sm rounded">Oracle</span>
+              <span class="px-3 py-1 bg-[#722f37]/50 text-[#f4e9d8] text-sm rounded">Lenormand</span>
+            </div>
+          </div>
+          
+          <!-- Divination Tools -->
+          <div class="p-8 bg-[#722f37]/40 border-2 border-[#722f37] rounded-lg">
+            <div class="text-center mb-6">
+              <div class="inline-block p-4 bg-[#1a3d2e] rounded-full border-2 border-[#f4e9d8]/30" aria-hidden="true">
+                <span class="text-4xl" style="color:#f4e9d8;">🌟</span>
+              </div>
+            </div>
+            <h3 class="font-heading text-2xl text-[#f4e9d8] text-center mb-4">Divination Tools</h3>
+            <ul class="font-body text-[#f4e9d8]/80 space-y-3">
+              <li class="flex items-start gap-2">
+                <span class="text-[#722f37] mt-1">❧</span>
+                <span>Pendulums — crystal & metal</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#722f37] mt-1">❧</span>
+                <span>Scrying mirrors & bowls</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#722f37] mt-1">❧</span>
+                <span>Rune sets — stone & wood</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#722f37] mt-1">❧</span>
+                <span>Spirit boards</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#722f37] mt-1">❧</span>
+                <span>Dowsing rods</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Tarot reading services banner -->
+        <div class="relative p-8 md:p-10 bg-gradient-to-r from-[#722f37] via-[#1a3d2e] to-[#722f37] border-2 border-[#f4e9d8]/30 rounded-lg text-center overflow-hidden">
+          <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(45deg, #f4e9d8 0, #f4e9d8 1px, transparent 0, transparent 50%); background-size: 20px 20px;"></div>
+          <div class="relative">
+            <span class="font-accent text-2xl text-[#f4e9d8]/80">In-Store</span>
+            <h3 class="font-display text-3xl text-[#f4e9d8] mt-2 mb-4">Tarot Readings Available</h3>
+            <p class="font-body text-[#f4e9d8]/80 max-w-xl mx-auto">
+              Our resident readers are here Saturdays & by appointment. 
+              15-minute, 30-minute, and full Celtic Cross readings available.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Transition with different pattern -->
+      <div class="absolute bottom-0 left-0 right-0">
+        <svg class="w-full h-28" viewBox="0 0 1440 112" preserveAspectRatio="none">
+          <path d="M0,56 C240,112 480,0 720,56 C960,112 1200,0 1440,56 L1440,112 L0,112 Z" fill="#1a0a2e"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         ROOM 5: THE HOLLOW (Adults Only Downstairs)
+         Midnight purple/indigo with electric accents
+    ═══════════════════════════════════════════════════════════════════════════ -->
+    <section class="relative py-24 overflow-hidden" style="background: radial-gradient(ellipse at center, #2d1b4e 0%, #1a0a2e 70%, #0d0519 100%);">
+      
+      <!-- Neon/electric glow effects -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-20 left-[20%] w-64 h-64 rounded-full bg-[#8b5cf6]/10 blur-3xl"></div>
+        <div class="absolute bottom-20 right-[15%] w-48 h-48 rounded-full bg-[#ec4899]/10 blur-3xl"></div>
+        <div class="absolute top-1/2 left-[50%] w-32 h-32 rounded-full bg-[#8b5cf6]/15 blur-2xl animate-pulse"></div>
+        
+        <!-- Subtle star field -->
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle, #c0c0c0 1px, transparent 1px); background-size: 80px 80px; opacity: 0.05;"></div>
+      </div>
+      
+      <div class="relative z-10 container mx-auto px-6">
+        <!-- Section header with age warning -->
+        <div class="text-center mb-12">
+          <div class="inline-block px-6 py-2 bg-[#ec4899]/20 border border-[#ec4899]/50 rounded-full mb-6">
+            <span class="font-heading text-sm text-[#ec4899] uppercase tracking-widest">⚠️ Adults Only — Must Be 18+ ⚠️</span>
+          </div>
+          
+          <div class="flex items-center justify-center gap-4 mb-6">
+            <span class="text-4xl">🌙</span>
+            <h2 class="font-display text-4xl md:text-5xl text-[#c0c0c0] tracking-wide" style="text-shadow: 0 0 30px rgba(139, 92, 246, 0.5);">
+              The Hollow
+            </h2>
+            <span class="text-4xl">🌙</span>
+          </div>
+          <p class="font-body text-xl text-[#c0c0c0]/80 max-w-2xl mx-auto">
+            Descend the stairs to our downstairs den. A curated collection for grown-up tastes.
+          </p>
+        </div>
+        
+        <!-- Tasteful category hints -->
+        <div class="max-w-4xl mx-auto">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            <div class="text-center p-6 bg-[#2d1b4e]/50 border border-[#8b5cf6]/30 rounded-lg hover:border-[#8b5cf6]/60 transition-colors">
+              <div class="text-4xl mb-3">💨</div>
+              <span class="font-heading text-[#c0c0c0] text-sm uppercase tracking-wider">Glass Art</span>
+            </div>
+            <div class="text-center p-6 bg-[#2d1b4e]/50 border border-[#8b5cf6]/30 rounded-lg hover:border-[#8b5cf6]/60 transition-colors">
+              <div class="text-4xl mb-3">💎</div>
+              <span class="font-heading text-[#c0c0c0] text-sm uppercase tracking-wider">Body Jewelry</span>
+            </div>
+            <div class="text-center p-6 bg-[#2d1b4e]/50 border border-[#8b5cf6]/30 rounded-lg hover:border-[#8b5cf6]/60 transition-colors">
+              <div class="text-4xl mb-3">🎭</div>
+              <span class="font-heading text-[#c0c0c0] text-sm uppercase tracking-wider">Novelties</span>
+            </div>
+            <div class="text-center p-6 bg-[#2d1b4e]/50 border border-[#8b5cf6]/30 rounded-lg hover:border-[#8b5cf6]/60 transition-colors">
+              <div class="text-4xl mb-3">✨</div>
+              <span class="font-heading text-[#c0c0c0] text-sm uppercase tracking-wider">& More</span>
+            </div>
+          </div>
+          
+          <!-- Disclaimer -->
+          <p class="font-body text-center text-[#c0c0c0]/60 text-sm">
+            Valid ID required. No exceptions. We appreciate your understanding.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Transition -->
+      <div class="absolute bottom-0 left-0 right-0">
+        <svg class="w-full h-20" viewBox="0 0 1440 80" preserveAspectRatio="none">
+          <path d="M0,40 Q720,80 1440,40 L1440,80 L0,80 Z" fill="#3d2314"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         ROOM 6: MORE TREASURES
+         Quick showcase of other offerings
+    ═══════════════════════════════════════════════════════════════════════════ -->
+    <section class="relative py-24 overflow-hidden" style="background: linear-gradient(180deg, #3d2314 0%, #5c3a1d 50%, #3d2314 100%);">
+      
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;80&quot; height=&quot;80&quot; viewBox=&quot;0 0 80 80&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Ccircle cx=&quot;40&quot; cy=&quot;40&quot; r=&quot;30&quot; fill=&quot;none&quot; stroke=&quot;%239caf88&quot; stroke-width=&quot;0.5&quot;/%3E%3Ccircle cx=&quot;40&quot; cy=&quot;40&quot; r=&quot;20&quot; fill=&quot;none&quot; stroke=&quot;%239caf88&quot; stroke-width=&quot;0.5&quot;/%3E%3Ccircle cx=&quot;40&quot; cy=&quot;40&quot; r=&quot;10&quot; fill=&quot;none&quot; stroke=&quot;%239caf88&quot; stroke-width=&quot;0.5&quot;/%3E%3C/svg%3E');"></div>
+      </div>
+      
+      <div class="relative z-10 container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="font-display text-4xl md:text-5xl text-[#9caf88] tracking-wide mb-4">
+            More Treasures Await
+          </h2>
+          <p class="font-body text-xl text-[#fff5e6]/80">
+            Every corner holds something magical
+          </p>
+        </div>
+        
+        <!-- Bento-style grid of other offerings -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div class="aspect-square p-4 bg-[#c45a3b]/30 border border-[#c45a3b]/50 rounded-lg flex flex-col items-center justify-center text-center hover:bg-[#c45a3b]/40 transition-colors group">
+            <span class="text-4xl mb-2 group-hover:scale-110 transition-transform">👗</span>
+            <span class="font-heading text-[#fff5e6] text-sm">Tie-Dye & Clothing</span>
+          </div>
+          <div class="aspect-square p-4 bg-[#9caf88]/30 border border-[#9caf88]/50 rounded-lg flex flex-col items-center justify-center text-center hover:bg-[#9caf88]/40 transition-colors group">
+            <span class="text-4xl mb-2 group-hover:scale-110 transition-transform">🎶</span>
+            <span class="font-heading text-[#fff5e6] text-sm">Drums & Chimes</span>
+          </div>
+          <div class="aspect-square p-4 bg-[#c45a3b]/30 border border-[#c45a3b]/50 rounded-lg flex flex-col items-center justify-center text-center hover:bg-[#c45a3b]/40 transition-colors group">
+            <span class="text-4xl mb-2 group-hover:scale-110 transition-transform">🗿</span>
+            <span class="font-heading text-[#fff5e6] text-sm">Sacred Statuary</span>
+          </div>
+          <div class="aspect-square p-4 bg-[#9caf88]/30 border border-[#9caf88]/50 rounded-lg flex flex-col items-center justify-center text-center hover:bg-[#9caf88]/40 transition-colors group">
+            <span class="text-4xl mb-2 group-hover:scale-110 transition-transform">🌍</span>
+            <span class="font-heading text-[#fff5e6] text-sm">Fair Trade Goods</span>
+          </div>
+          <div class="aspect-square p-4 bg-[#c45a3b]/30 border border-[#c45a3b]/50 rounded-lg flex flex-col items-center justify-center text-center hover:bg-[#c45a3b]/40 transition-colors group">
+            <span class="text-4xl mb-2 group-hover:scale-110 transition-transform">🧿</span>
+            <span class="font-heading text-[#fff5e6] text-sm">Talismans & Amulets</span>
+          </div>
+          <div class="aspect-square p-4 bg-[#9caf88]/30 border border-[#9caf88]/50 rounded-lg flex flex-col items-center justify-center text-center hover:bg-[#9caf88]/40 transition-colors group">
+            <span class="text-4xl mb-2 group-hover:scale-110 transition-transform">🎁</span>
+            <span class="font-heading text-[#fff5e6] text-sm">Unique Gifts</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Transition to footer -->
+      <div class="absolute bottom-0 left-0 right-0">
+        <svg class="w-full h-16" viewBox="0 0 1440 64" preserveAspectRatio="none">
+          <path d="M0,32 L1440,32 L1440,64 L0,64 Z" fill="#1a0f0a"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         FOOTER: VISIT US
+         Rich earth tones with all the info
+    ═══════════════════════════════════════════════════════════════════════════ -->
+    <footer id="hours" class="relative py-16 overflow-hidden" style="background: linear-gradient(180deg, #1a0f0a 0%, #2d1a10 100%);">
+      
+      <!-- Decorative border top -->
+      <div class="absolute top-0 left-0 right-0 h-2" style="background: repeating-linear-gradient(90deg, #c45a3b, #c45a3b 10px, #9caf88 10px, #9caf88 20px, #f4c542 20px, #f4c542 30px);"></div>
+      
+      <div class="relative z-10 container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          
+          <!-- Logo & tagline -->
+          <div class="lg:col-span-1">
+            <h3 class="font-display text-3xl text-[#f4c542] mb-4">Moonstone & Sage</h3>
+            <p class="font-body text-[#fff5e6]/70 leading-relaxed">
+              Your local haven for mystical treasures, bohemian vibes, and spiritual supplies since 1987.
+            </p>
+            <div class="flex gap-3 mt-6">
+              <span class="text-2xl">☽</span>
+              <span class="text-2xl">✦</span>
+              <span class="text-2xl">☾</span>
+            </div>
+          </div>
+          
+          <!-- Hours -->
+          <div>
+            <h4 class="font-heading text-xl text-[#9caf88] mb-4 uppercase tracking-wider">Hours</h4>
+            <ul class="font-body text-[#fff5e6]/80 space-y-2">
+              <li class="flex justify-between">
+                <span>Monday - Thursday</span>
+                <span class="text-[#f4c542]">10am - 6pm</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Friday - Saturday</span>
+                <span class="text-[#f4c542]">10am - 8pm</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Sunday</span>
+                <span class="text-[#f4c542]">12pm - 5pm</span>
+              </li>
+            </ul>
+            <p class="font-body text-[#c45a3b] text-sm mt-4 italic">
+              ✦ Extended hours during full moons & sabbats
+            </p>
+          </div>
+          
+          <!-- Location -->
+          <div>
+            <h4 class="font-heading text-xl text-[#9caf88] mb-4 uppercase tracking-wider">Find Us</h4>
+            <address class="font-body text-[#fff5e6]/80 not-italic space-y-2">
+              <p>123 Main Street</p>
+              <p>Willowbrook, NY 12345</p>
+              <p class="mt-4">
+                <a href="tel:555-123-4567" class="text-[#f4c542] hover:underline">(555) 123-MOON</a>
+              </p>
+              <p>
+                <a href="mailto:hello@moonstoneandsage.com" class="text-[#f4c542] hover:underline">hello@moonstoneandsage.com</a>
+              </p>
+            </address>
+          </div>
+          
+          <!-- Connect -->
+          <div>
+            <h4 class="font-heading text-xl text-[#9caf88] mb-4 uppercase tracking-wider">Connect</h4>
+            <div class="flex flex-wrap gap-4">
+              <a href="#" class="w-12 h-12 bg-[#c45a3b]/30 border border-[#c45a3b]/50 rounded-full flex items-center justify-center text-[#fff5e6] hover:bg-[#c45a3b]/50 transition-colors" aria-label="Facebook">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              </a>
+              <a href="#" class="w-12 h-12 bg-[#c45a3b]/30 border border-[#c45a3b]/50 rounded-full flex items-center justify-center text-[#fff5e6] hover:bg-[#c45a3b]/50 transition-colors" aria-label="Instagram">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+              <a href="#" class="w-12 h-12 bg-[#c45a3b]/30 border border-[#c45a3b]/50 rounded-full flex items-center justify-center text-[#fff5e6] hover:bg-[#c45a3b]/50 transition-colors" aria-label="TikTok">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/></svg>
+              </a>
+            </div>
+            <p class="font-body text-[#fff5e6]/60 text-sm mt-6">
+              Follow us for new arrivals, tarot tips, and full moon specials ✨
+            </p>
+          </div>
+        </div>
+        
+        <!-- Bottom bar -->
+        <div class="mt-16 pt-8 border-t border-[#c45a3b]/30">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="font-body text-[#fff5e6]/50 text-sm text-center md:text-left">
+              © 2024 Moonstone & Sage. All rights reserved. Made with ☽ on Main Street.
+            </p>
+            <div class="flex items-center gap-2 text-[#fff5e6]/50 text-sm">
+              <span>☽</span>
+              <span>✦</span>
+              <span>☾</span>
+              <span class="ml-2 font-accent text-[#f4c542]">Blessed Be</span>
+              <span>☽</span>
+              <span>✦</span>
+              <span>☾</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      /* Base styles */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        font-family: 'Crimson Text', serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      
+      /* Font families */
+      .font-display {
+        font-family: 'Cinzel Decorative', serif;
+      }
+      
+      .font-heading {
+        font-family: 'Cinzel', serif;
+      }
+      
+      .font-body {
+        font-family: 'Crimson Text', serif;
+      }
+      
+      .font-accent {
+        font-family: 'Satisfy', cursive;
+      }
+      
+      /* Custom animations */
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      
+      /* Selection styling */
+      ::selection {
+        background: #6b1d4e;
+        color: #f4c542;
+      }
+      
+      /* Scrollbar styling */
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: #2d0f3a;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #6b1d4e, #f4c542);
+        border-radius: 6px;
+        border: 2px solid #2d0f3a;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #8b2d6e, #f4d562);
+      }
+    </style>
+  </body>
 </html>
