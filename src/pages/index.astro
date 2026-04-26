@@ -791,37 +791,92 @@
 
     <style>
       /* CLS fix: fallback @font-face declarations sized to match the Google fonts.
-         The numbers come from the official Google fonts metrics — they make the
-         system fallback font occupy the same vertical space as the real font, so
-         when the swap happens there's no layout shift. */
+         Each weight/style has its own metrics so italic, semibold, and bold all
+         occupy the exact same vertical space as the loaded font. */
 
+      /* === Cinzel Decorative Fallback (display headings) === */
       @font-face {
         font-family: 'Cinzel Decorative Fallback';
         src: local('Times New Roman'), local('Times');
+        font-weight: 400;
+        size-adjust: 105%;
+        ascent-override: 90%;
+        descent-override: 25%;
+        line-gap-override: 0%;
+      }
+      @font-face {
+        font-family: 'Cinzel Decorative Fallback';
+        src: local('Times New Roman Bold'), local('Times Bold');
+        font-weight: 700 900;
         size-adjust: 105%;
         ascent-override: 90%;
         descent-override: 25%;
         line-gap-override: 0%;
       }
 
+      /* === Cinzel Fallback (heading uppercase text) === */
       @font-face {
         font-family: 'Cinzel Fallback';
         src: local('Times New Roman'), local('Times');
+        font-weight: 400 500;
+        size-adjust: 100%;
+        ascent-override: 92%;
+        descent-override: 24%;
+        line-gap-override: 0%;
+      }
+      @font-face {
+        font-family: 'Cinzel Fallback';
+        src: local('Times New Roman Bold'), local('Times Bold');
+        font-weight: 600 700;
         size-adjust: 100%;
         ascent-override: 92%;
         descent-override: 24%;
         line-gap-override: 0%;
       }
 
+      /* === Crimson Text Fallback (body text — regular, italic, semibold) === */
       @font-face {
         font-family: 'Crimson Text Fallback';
         src: local('Georgia'), local('Times New Roman');
+        font-weight: 400;
+        font-style: normal;
         size-adjust: 105%;
         ascent-override: 90%;
         descent-override: 26%;
         line-gap-override: 0%;
       }
+      @font-face {
+        font-family: 'Crimson Text Fallback';
+        src: local('Georgia Italic'), local('Georgia'), local('Times New Roman Italic');
+        font-weight: 400;
+        font-style: italic;
+        size-adjust: 106%;
+        ascent-override: 89%;
+        descent-override: 26%;
+        line-gap-override: 0%;
+      }
+      @font-face {
+        font-family: 'Crimson Text Fallback';
+        src: local('Georgia Bold'), local('Georgia'), local('Times New Roman Bold');
+        font-weight: 600 700;
+        font-style: normal;
+        size-adjust: 103%;
+        ascent-override: 91%;
+        descent-override: 26%;
+        line-gap-override: 0%;
+      }
+      @font-face {
+        font-family: 'Crimson Text Fallback';
+        src: local('Georgia Bold Italic'), local('Georgia Italic'), local('Georgia');
+        font-weight: 600 700;
+        font-style: italic;
+        size-adjust: 104%;
+        ascent-override: 90%;
+        descent-override: 26%;
+        line-gap-override: 0%;
+      }
 
+      /* === Satisfy Fallback (decorative script accent) === */
       @font-face {
         font-family: 'Satisfy Fallback';
         src: local('Brush Script MT'), local('Comic Sans MS'), local('Georgia');
