@@ -32,10 +32,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Preload the critical hero font (Cinzel Decorative) to land early and reduce CLS -->
-    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/cinzeldecorative/v19/daaCSScvJGqLYhG8nNt8KPPswUAPni7TTMxpazyD.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/crimsontext/v19/wlp2gwHKFkZgtmSR3NB0oRJfbwhTIfFd3A.woff2" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Satisfy&display=swap" rel="stylesheet">
+    <!-- Use display=optional on body fonts that cause CLS issues — won't swap mid-paint -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Satisfy&display=optional" rel="stylesheet">
   </head>
   <body class="overflow-x-hidden">
     <main>
@@ -790,132 +788,31 @@
     </footer>
 
     <style>
-      /* CLS fix: fallback @font-face declarations sized to match the Google fonts.
-         Each weight/style has its own metrics so italic, semibold, and bold all
-         occupy the exact same vertical space as the loaded font. */
-
-      /* === Cinzel Decorative Fallback (display headings) === */
-      @font-face {
-        font-family: 'Cinzel Decorative Fallback';
-        src: local('Times New Roman'), local('Times');
-        font-weight: 400;
-        size-adjust: 105%;
-        ascent-override: 90%;
-        descent-override: 25%;
-        line-gap-override: 0%;
-      }
-      @font-face {
-        font-family: 'Cinzel Decorative Fallback';
-        src: local('Times New Roman Bold'), local('Times Bold');
-        font-weight: 700 900;
-        size-adjust: 105%;
-        ascent-override: 90%;
-        descent-override: 25%;
-        line-gap-override: 0%;
-      }
-
-      /* === Cinzel Fallback (heading uppercase text) === */
-      @font-face {
-        font-family: 'Cinzel Fallback';
-        src: local('Times New Roman'), local('Times');
-        font-weight: 400 500;
-        size-adjust: 100%;
-        ascent-override: 92%;
-        descent-override: 24%;
-        line-gap-override: 0%;
-      }
-      @font-face {
-        font-family: 'Cinzel Fallback';
-        src: local('Times New Roman Bold'), local('Times Bold');
-        font-weight: 600 700;
-        size-adjust: 100%;
-        ascent-override: 92%;
-        descent-override: 24%;
-        line-gap-override: 0%;
-      }
-
-      /* === Crimson Text Fallback (body text — regular, italic, semibold) === */
-      @font-face {
-        font-family: 'Crimson Text Fallback';
-        src: local('Georgia'), local('Times New Roman');
-        font-weight: 400;
-        font-style: normal;
-        size-adjust: 105%;
-        ascent-override: 90%;
-        descent-override: 26%;
-        line-gap-override: 0%;
-      }
-      @font-face {
-        font-family: 'Crimson Text Fallback';
-        src: local('Georgia Italic'), local('Georgia'), local('Times New Roman Italic');
-        font-weight: 400;
-        font-style: italic;
-        size-adjust: 106%;
-        ascent-override: 89%;
-        descent-override: 26%;
-        line-gap-override: 0%;
-      }
-      @font-face {
-        font-family: 'Crimson Text Fallback';
-        src: local('Georgia Bold'), local('Georgia'), local('Times New Roman Bold');
-        font-weight: 600 700;
-        font-style: normal;
-        size-adjust: 103%;
-        ascent-override: 91%;
-        descent-override: 26%;
-        line-gap-override: 0%;
-      }
-      @font-face {
-        font-family: 'Crimson Text Fallback';
-        src: local('Georgia Bold Italic'), local('Georgia Italic'), local('Georgia');
-        font-weight: 600 700;
-        font-style: italic;
-        size-adjust: 104%;
-        ascent-override: 90%;
-        descent-override: 26%;
-        line-gap-override: 0%;
-      }
-
-      /* === Satisfy Fallback (decorative script accent) === */
-      @font-face {
-        font-family: 'Satisfy Fallback';
-        src: local('Brush Script MT'), local('Comic Sans MS'), local('Georgia');
-        size-adjust: 100%;
-        ascent-override: 95%;
-        descent-override: 30%;
-        line-gap-override: 0%;
-      }
-
       /* Base styles */
       html {
         scroll-behavior: smooth;
       }
       
       body {
-        font-family: 'Crimson Text', 'Crimson Text Fallback', Georgia, serif;
-        font-display: swap;
+        font-family: 'Crimson Text', Georgia, 'Times New Roman', serif;
         -webkit-font-smoothing: antialiased;
       }
       
-      /* Font families with sized-matched fallbacks to eliminate CLS */
+      /* Font families with system serif fallbacks */
       .font-display {
-        font-family: 'Cinzel Decorative', 'Cinzel Decorative Fallback', 'Times New Roman', serif;
-        font-display: swap;
+        font-family: 'Cinzel Decorative', 'Trajan Pro', 'Times New Roman', Georgia, serif;
       }
       
       .font-heading {
-        font-family: 'Cinzel', 'Cinzel Fallback', 'Times New Roman', serif;
-        font-display: swap;
+        font-family: 'Cinzel', 'Trajan Pro', 'Times New Roman', Georgia, serif;
       }
       
       .font-body {
-        font-family: 'Crimson Text', 'Crimson Text Fallback', Georgia, serif;
-        font-display: swap;
+        font-family: 'Crimson Text', Georgia, 'Times New Roman', serif;
       }
       
       .font-accent {
-        font-family: 'Satisfy', 'Satisfy Fallback', cursive;
-        font-display: swap;
+        font-family: 'Satisfy', 'Brush Script MT', 'Lucida Handwriting', cursive;
       }
       
       /* Custom animations */
